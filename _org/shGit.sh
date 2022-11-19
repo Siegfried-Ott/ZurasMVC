@@ -3,7 +3,7 @@
 function PushIt()
 {
   git add .
-  git commit -m "04 shell script added"
+  git commit -m "05 project restored"
   git push origin master
 }
 

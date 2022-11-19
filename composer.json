@@ -1,0 +1,16 @@
+{
+    "name": "siegfried.ott/zuras-mvc",
+    "description": "My owen PHP MVC framework",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Siegfried Ott",
+            "email": "emilmeier@hotmail.com"
+        }
+    ],
+    "require": {}
+}
