@@ -1,2 +1,2 @@
-# My owen php framework
-# cd public; php -S localhost:5000
+My owen php framework
+cd public; php -S localhost:5000
