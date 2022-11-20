@@ -3,7 +3,7 @@
 function PushIt()
 {
   git add .
-  git commit -m "05 project restored"
+  git commit -m "06 Start of chapter 03"
   git push origin master
 }
 
@@ -19,4 +19,7 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
+
+read -n 1 -s -r -p "Press any key to continue"
+
 

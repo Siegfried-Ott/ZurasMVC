@@ -26,10 +26,10 @@ use app\core\form\Form;
 
 <div class="row">
   <div class="col">
-    <?php echo $form->field($model, "password") ?>
+    <?php echo $form->field($model, "password")->passwordField() ?>
   </div>
   <div class="col">
-    <?php echo $form->field($model, "confirmPassword") ?>
+    <?php echo $form->field($model, "confirmPassword")->passwordField() ?>
   </div>
 </div><br>
 <button type="submit" class="btn btn-success">Submit</button>

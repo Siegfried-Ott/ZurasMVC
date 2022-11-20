@@ -11,6 +11,10 @@ use app\core\Model;
  */
 class Field
 {
+  public const TYPE_TEXT = 'text';
+  public const TYPE_PASSWORD = 'password';
+  public const TYPE_NUMBER = 'number';
+  public string $type;
   public Model $model;
   public string $attribute;
 
@@ -21,6 +25,7 @@ class Field
    */
   public function __construct(Model $model, $attribute)
   {
+    $this->type = self::TYPE_TEXT;
     $this->model = $model;
     $this->attribute = $attribute;
   }
@@ -35,11 +40,42 @@ class Field
         <div class="invalid-feedback">%s</div>
       </div>
       ', ucfirst($this->attribute),
-         (str_contains($this->attribute, "assword") ? "password" : "text"),
+         $this->type,
          $this->attribute,
          $this->model->{ $this->attribute},
          $this->model->hasError($this->attribute) ? ' is-invalid': '',
          $this->model->getFirstError($this->attribute),
     );
   }
+
+  public function passwordField() 
+  {
+    $this->type = self::TYPE_PASSWORD;
+    return $this;
+  }
 }
+
+/* 
+    <input type="button">
+    <input type="checkbox">
+    <input type="color">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="email">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="month">
+    <input type="number">
+    <input type="password">
+    <input type="radio">
+    <input type="range">
+    <input type="reset">
+    <input type="search">
+    <input type="submit">
+    <input type="tel">
+    <input type="text">
+    <input type="time">
+    <input type="url">
+    <input type="week">
+*/
